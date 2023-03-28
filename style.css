@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+input {
+  outline: none;
+  border: none;
+}
+:root {
+  --background-color: #52b69a;
+  --button: tomato;
+  --white: #ffffff;
+  --border-radius: 5px;
+}
+/* start style */
+main {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (max-width: 667px) {
+  main {
+    width: fit-content;
+  }
+}
+main .form {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  position: relative;
+}
+main .form .input {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+}
+main .form .add {
+  width: 90px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background-color: var(--button);
+  color: var(--white);
+  font-size: 1rem;
+}
+main .tasks {
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+main .task {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: wrap;
+}
+.msg {
+  width: fit-content;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--white);
+  position: absolute;
+  left: 20px;
+  bottom: 1px;
+  display: none;
+}
+.del {
+  background-color: var(--button);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--border-radius);
+}
+input[type="checkbox"]:checked {
+  accent-color: var(--background-color);
+  /* filter: invert(1); */
+} 
+main .task:not(:last-child) {
+  margin-bottom: 20px;
+}
+.delAll {
+  background-color: var(--button);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  margin: 20px auto;
+  width: fit-content;
+  cursor: pointer;
+}
