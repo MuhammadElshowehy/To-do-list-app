@@ -23,7 +23,7 @@ input {
 main {
   width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 5px; 
 }
 @media (max-width: 667px) {
   main {
@@ -68,7 +68,6 @@ main .task {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  white-space: wrap;
 }
 .msg {
   width: fit-content;

@@ -20,17 +20,18 @@ function checkAndGetDataFromLocalStorage() {
 
 // when click add task button
 add.onclick = function () {
-  if (input.value !== "" && input.value.length <= 35) {
+  if (input.value !== "" && input.value.length <= 40) {
     addTaskToArray(input.value);
     input.value = "";
   }
-  if (input.value.length > 35) {
+  // character limitation for task
+  if (input.value.length > 40) {
     let msg = document.querySelector(".msg");
     msg.style.display = "block";
     setTimeout(() => {
       msg.style.display = "none";
     }, 4000);
-  } 
+  }
   toggleShowForDeleteAllButton();
 };
 
@@ -52,7 +53,7 @@ function addTasksToPage(tasksArray) {
   tasksArray.forEach((task) => {
     // create task element:
     let div = document.createElement("div");
-    div.className = "task";
+    div.className = "task edit";
     div.setAttribute("data-id", task.id);
     div.appendChild(document.createTextNode(task.content));
 
@@ -72,11 +73,11 @@ function addTasksToPage(tasksArray) {
     tasks.appendChild(div);
 
     // check if task completed
-      if (task.completed) {
-        done.checked = true;
-      } else {
-        done.checked = false;     
-      }
+    if (task.completed) {
+      done.checked = true;
+    } else {
+      done.checked = false;
+    }
   });
 }
 
