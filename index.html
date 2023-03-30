@@ -4,24 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favIcon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <!-- start favIcon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- end favIcon -->
     <!-- main style file -->
     <link rel="stylesheet" href="style.css" />
-    <title>Elshowehy - To do list app</title>
+    <title>Elshowehy - To-Do List App</title>
   </head>
   <body>
     <main>
+      <h2>To-Do List App</h2>
       <div class="form">
-        <input type="text" class="input" />
-        <span class="msg">task should be 40 char or less</span>
+        <input type="text" class="input" placeholder="Add your task here" />
         <input type="submit" class="add" value="Add Task" />
+        <span class="msg1">Please write some thing</span>
+      </div>
+      <div class="remove">
+        <div class="remAll">Delete All Tasks</div>
+        <div class="remComp">Delete Completed Tasks</div>
       </div>
       <div class="tasks"></div>
-      <div class="delAll">Delete All Tasks</div>
+      <span class="msg2">Please write some thing</span>
     </main>
     <script src="main.js"></script>
   </body>
